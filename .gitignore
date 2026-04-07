@@ -1,0 +1,17 @@
+*__pycache__/
+*.DS_Store
+*.DS_Store/
+.claude/
+*.swp
+
+resources/
+
+# symlinks
+project
+
+# auxiliary files
+sync.sh
+reverb_render.py
+plot_wavefront.py
+*.pptx
+
