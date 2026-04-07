@@ -591,15 +591,15 @@
     <!-- ── CARD VIEW (RR) ── -->
     <div class="tab-panel active" id="tab-exp1">
       <p class="audio-section-desc">
-        Reverberation rendering results convolved using the simulated impulse responses.
-        See 'Impulse Responses' tab for the raw impulse response audio files used for convolution along with the further details on the physical parameters of the simulation (e.g., wave speed, damping factor, etc.).
+        Reverberation rendering results convolved using the impulse responses synthesized using the modal approach.
+        The synthesis parameters follow the settings described in the "Impulse Responses" tab.
       </p>
 
       <div class="audio-group">
         <div class="audio-group-header">
           <div>
             <span class="sample-index">SAMPLE 01</span>
-            <p class="transcript" style="margin-top:var(--space-2)">Flute</p>
+            <p class="transcript" style="margin-top:var(--space-2)">Flute (T60: 1.0 sec @100Hz, 0.5 sec @1000Hz)</p>
           </div>
         </div>
         <div class="audio-cards-grid">
@@ -665,7 +665,7 @@
         <div class="audio-group-header">
           <div>
             <span class="sample-index">SAMPLE 02</span>
-            <p class="transcript" style="margin-top:var(--space-2)">Brass</p>
+            <p class="transcript" style="margin-top:var(--space-2)">Brass (T60: 4.0 sec @100Hz, 1.0 sec @1000Hz)</p>
           </div>
         </div>
         <div class="audio-cards-grid">
@@ -733,9 +733,12 @@
     <div class="tab-panel" id="tab-exp2">
       <p class="audio-section-desc" style="margin-bottom:var(--space-6)">
         Comparison of the impulse response (IR) synthesized by our proposed modal method against the FDTD simulation as the ground truth. The IRs are synthesized with a Rayleigh damping model on top of the same FDTD/modal structure. Spectra of the responses without damping can be found in the paper.
-        The dimension of the geometry is set by \(L_x=3.0\) m and \(L_y=2.0\) m, and the wave speed is set to \(c=343\) m/s.
-        The space/time resolution for the simulation is set to \(\Delta x = 0.01\) m and \(\Delta t = {\Delta x}/{\sqrt{2}c}\) s, and the total simulation time is 4 seconds.
-        The source and receiver locations are fixed across all samples by \(\mathbf{r}_s=(0.84, 0.33)\), and \(\mathbf{r}_r=(0.50, 0.30)\), respectively.
+        Unless otherwise specified, the synthesis configuration is as follows:
+        Dimension of the manifold: \(L_x \times L_y = 7 \times 5\) m.
+        Wave speed: \(c = 343\) m/s.
+        Discretization: \(\Delta x = 0.1\) m, \(\Delta t = {\Delta x}/{\sqrt{2}c}\) s.
+        Source position: \((1.96, 0.825)\) m.
+        Receiver position: \((2.33, 3.33)\) m.
       </p>
 
       <!-- Damped Light -->
@@ -1060,7 +1063,7 @@
 <section id="citation">
   <div class="container">
     <p class="section-label">04 — Reference</p>
-    <h2 class="section-title">Cite This Work</h2>
+    <h2 class="section-title">How to Cite</h2>
     <div class="citation-block">
       <div class="citation-header">
         <span>BibTeX</span>
